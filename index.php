@@ -13,8 +13,7 @@
 <form action="zamowienie.php" method="post">
 <h2>Koszulka - 14.99 zł</h2>
 <h3>Liczba zamawianych koszulek:</h3> <input style="padding: 10px;
-    font-size: 20px;" type="number"
- name="tshirt" />
+    font-size: 20px;" type="number" name="tshirt" />
  <br>
  <h2>Spodnie - 49.99 zł</h2>
  <h3>Liczba zamawianych spodni:</h3> <input style="padding: 10px;
@@ -31,9 +30,21 @@
     font-size: 20px;" type="number"
  name="shoes"/>
  <br>
-<input style="WIDTH: 250px;
+ <h2>Dane Klienta:
+ <h3>Imię:</h3><br>
+<input style="padding: 10px;
+    font-size: 20px;" type="text" placeholder="Wpisz swoje imię" name="firstname"/>
+<h3>Nazwisko:</h3><br>
+<input style="padding: 10px;
+    font-size: 20px;" type="text" placeholder="Wpisz swoje nazwisko" name="surname"/>
+<h3>Kraj:</h3><br>
+<input style="padding: 10px;
+    font-size: 20px;" type="text" placeholder="Wpisz nazwę kraju" name="country"/>
+<br>
+ <input style="WIDTH: 250px;
     height: 50px;
     margin: 35px;" type="submit" value="złóż zamówienie" />
+
     
 </body>
 </html>

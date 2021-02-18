@@ -9,6 +9,9 @@ $TSHIRT_QUANTITY = $_POST['tshirt'];
 $TROUSERS_QUANTITY = $_POST['trousers'];
 $CAP_QUANTITY = $_POST['cap'];
 $SHOES_QUANTITY = $_POST['shoes'];
+$CUSTOMER_NAME = $_POST['firstname'];
+$CUSTOMER_SURNAME = $_POST['surname'];
+$CUSTOMER_COUNTRY = $_POST['country'];
 
 $TSHIRT_PRICE = $TSHIRT_QUANTITY * TSHIRT;
 $TROUSERS_PRICE = $TROUSERS_QUANTITY * TROUSERS;
@@ -36,25 +39,23 @@ $ORDER_GROSS_VALUE = $TSHIRT_GROSS_PRICE + $TROUSERS_GROSS_PRICE + $CAP_GROSS_PR
     <h2>Podsumowanie zakupów:</h2>
 
  <?php
-
-echo "Cena netto zamówionych koszulek: ".$TSHIRT_PRICE."<br/>";
-
-
-echo "Cena netto zamówionych spodni: ".$TROUSERS_PRICE."<br/>";
-
-echo "Cena netto zamówionych czapek: ".$CAP_PRICE."<br/>";
-echo "Cena netto zamówionych butów: ".$SHOES_PRICE."<br/>";
-
+ if ($TSHIRT_PRICE <= 0)
+ {
+     echo "BRAK DANYCH"."<br/>";
+ }  
+ else{
+echo "Kwota netto zamówionych koszulek: ".$TSHIRT_PRICE."<br/>";}
+echo "Kwota netto zamówionych spodni: ".$TROUSERS_PRICE."<br/>";
+echo "Kwota netto zamówionych czapek: ".$CAP_PRICE."<br/>";
+echo "Kwota netto zamówionych butów: ".$SHOES_PRICE."<br/>";
 echo "Wartość netto całego zamówienia: ".$ORDER_VALUE."<br/>";
-
-echo "Cena brutto zamówionych koszulek: ".$TSHIRT_GROSS_PRICE."<br/>";
-
-echo "Cena brutto zamówionych spodni: ".$TROUSERS_GROSS_PRICE."<br/>";
-
-
-echo "Cena brutto zamówionych butów: ".$SHOES_GROSS_PRICE."<br/>";
+echo "Kwota brutto zamówionych koszulek: ".$TSHIRT_GROSS_PRICE."<br/>";
+echo "Kwota brutto zamówionych spodni: ".$TROUSERS_GROSS_PRICE."<br/>";
+echo "Kwota brutto zamówionych butów: ".$SHOES_GROSS_PRICE."<br/>";
 echo "Wartość brutto całego zamówienia: ".$ORDER_GROSS_VALUE."<br/>";
-
+echo "Imię klienta: ".$CUSTOMER_NAME."<br/>";
+echo "Nazwisko klienta: ".$CUSTOMER_SURNAME."<br/>";
+echo "Kraj wysyłki: ".$CUSTOMER_COUNTRY."<br/>";
 ?> 
 </body>
  </html>
