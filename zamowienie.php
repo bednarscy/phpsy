@@ -39,7 +39,7 @@ $ORDER_GROSS_VALUE = $TSHIRT_GROSS_PRICE + $TROUSERS_GROSS_PRICE + $CAP_GROSS_PR
     <h2>Podsumowanie zakupów:</h2>
 
  <?php
- if ($TSHIRT_PRICE <= 0)
+ if ($TSHIRT_QUANTITY <= 0)
  {
      echo "BRAK DANYCH"."<br/>";
  }  
@@ -56,6 +56,14 @@ echo "Wartość brutto całego zamówienia: ".$ORDER_GROSS_VALUE."<br/>";
 echo "Imię klienta: ".$CUSTOMER_NAME."<br/>";
 echo "Nazwisko klienta: ".$CUSTOMER_SURNAME."<br/>";
 echo "Kraj wysyłki: ".$CUSTOMER_COUNTRY."<br/>";
+
 ?> 
+<html>
+<form action="kasa.php" method="post">
+<h2>Kontynuuj zakupy</h2>
+<input style="padding: 10px;font-size: 20px;" value="<?php echo $ORDER_GROSS_VALUE?>" type="hidden" name="cash" />
+ <input style="WIDTH: 250px;
+    height: 50px;
+    margin: 35px;" type="submit" value="Potwierdź i przejdź dalej" />
 </body>
  </html>
